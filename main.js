@@ -8,7 +8,7 @@ app.whenReady().then(() => {
         webPreferences:{
             nodeIntegration: true
         },
-        // autoHideMenuBar: true,
+        autoHideMenuBar: true,
     })
 
     window.maximize()
