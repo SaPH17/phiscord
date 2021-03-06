@@ -8,9 +8,9 @@ app.whenReady().then(() => {
         webPreferences:{
             nodeIntegration: true
         },
-        autoHideMenuBar: true,
+        // autoHideMenuBar: true,
     })
 
     window.maximize()
-    window.loadFile('index.html')
+    window.loadURL('http://localhost:3000')
 })
