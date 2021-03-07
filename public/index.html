@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/Untitled.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web site created using create-react-app"/>
@@ -15,13 +15,13 @@
     <div id="root"></div>
   </body>
   <script>
-    document.querySelectorAll('.btn').forEach((elem, i) => {
-        elem.onmouseenter = function (){
-          console.log(elem, i);
-
-            document.getElementsByClassName('status')[i].classList.add('hovered')
-    
-        }
+    document.querySelectorAll('.nav-btn').forEach((elem, i) => {
+      elem.onmouseenter = () => {
+        document.getElementsByClassName('status')[i].classList.add('hovered')
+      }
+      elem.onmouseleave = () => {
+        document.getElementsByClassName('status')[i].classList.remove('hovered')
+      }
     })
   </script>
 </html>

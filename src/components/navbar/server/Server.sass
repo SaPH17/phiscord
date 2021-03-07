@@ -1,4 +1,4 @@
-@use '../../variables'
+@use '../../../variables'
 
 $status-none: 0px
 $status-notif: 8px
@@ -22,9 +22,12 @@ $status-active: 40px
         background-color: variables.$white-color
         border-top-right-radius: 4px
         border-bottom-right-radius: 4px
-        transition-duration: 0.2s
+        transition-duration: 0.1s
 
-    .server-btn
+    .hovered
+        height: $status-hover
+
+    .nav-btn
         background-color: variables.$primary-color
         border-radius: 50%
         display: flex
@@ -40,6 +43,3 @@ $status-active: 40px
         &:hover
             background-color: variables.$blue-color
             border-radius: 30%
-            
-            .status
-                background-color: red

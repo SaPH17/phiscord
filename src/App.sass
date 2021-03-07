@@ -1,5 +1,15 @@
+@use './variables'
+    
 .container
     display: flex
     flex-direction: row
     height: 100%
     width: 100%
+
+    .sidebar-container
+        display: flex
+        flex-direction: column
+
+        .sidebar-content-container
+            height: calc( 100% -  52px)
+            background-color: variables.$navbar-color
