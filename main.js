@@ -1,16 +1,39 @@
 const {app, BrowserWindow} = require('electron')
+const path = require('path');
 
-app.whenReady().then(() => { 
+let mainWindow
 
-    var window = new BrowserWindow({
+const createWindow = () => {
+    mainWindow = new BrowserWindow({
         width: 800,
-        height: 600,
+        minWidth: 800,
+        height: 450,
+        minHeight: 450,
+        // frame: false,
         webPreferences:{
-            nodeIntegration: true
+            nodeIntegration: true,
+            enableRemoteModule: true,
+            // preload: path.join(__dirname, 'preload.js'),
         },
         autoHideMenuBar: true,
     })
 
-    window.maximize()
-    window.loadURL('http://localhost:3000')
+    mainWindow.maximize()
+    mainWindow.loadURL('http://localhost:3000')
+}
+
+app.whenReady().then(() => {
+    createWindow()
+})
+
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') {
+      app.quit()
+    }
+})
+  
+app.on('activate', () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+        createWindow()
+    }
 })
