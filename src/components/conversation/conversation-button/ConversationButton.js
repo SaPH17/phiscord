@@ -7,7 +7,7 @@ const ConversationButton = () => {
             <img src={dummy} alt=""/>
             <div>
                 <div className="conversation-name">
-                    Dummy Desu
+                    Dummy Name
                 </div>
                 <div className="conversation-status">
                     Dummy Status

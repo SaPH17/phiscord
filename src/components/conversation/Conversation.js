@@ -6,17 +6,47 @@ const Conversation = () => {
 
     return (
         <div className="conversation-container">
-            <div className="conversation-friends">
+            <a className="conversation-friends" href="#">
                 <div className="conversation-friends-logo">
                     {friendLogo}
                 </div>
                 <div className="conversation-friends-title">
                     Friends
                 </div>
-            </div>
+            </a>
             <div className="title">
                 DIRECT MESSAGE
             </div>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
+            <ConversationButton/>
             <ConversationButton/>
             <ConversationButton/>
             <ConversationButton/>

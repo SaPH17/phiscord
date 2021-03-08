@@ -7,7 +7,7 @@ const Navbar = () => {
     const plusSign = <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M20 11.1111H12.8889V4H11.1111V11.1111H4V12.8889H11.1111V20H12.8889V12.8889H20V11.1111Z"></path></svg>
     return (
         <div className="navbar">
-            <NavButton content={discordLogo} classStyle="nav-btn"/>
+            <NavButton content={discordLogo} classStyle="home-btn" to="/"/>
             <div className="divider"></div>
             <div className="server-container">
                 <Server></Server>
@@ -15,7 +15,7 @@ const Navbar = () => {
                 <Server></Server>
                 <Server></Server>
             </div>
-            <NavButton content={plusSign} classStyle="plus-btn"/>
+            <NavButton content={plusSign} classStyle="plus-btn" to="/add"/>
         </div>
     )
 }

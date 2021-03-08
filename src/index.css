@@ -17,3 +17,18 @@ code {
   font-family: discord;
   src: url(assets/FreeSans.otf);
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2f3136;
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #202225; 
+  border-radius: 10px;
+}
