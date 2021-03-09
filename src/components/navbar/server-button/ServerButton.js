@@ -1,9 +1,9 @@
-import "./Navbar.sass"
-import NavButton from "./nav-button/NavButton.js"
-import Server from "./server-button/ServerButton.js"
+import "./ServerButton.sass"
+import { NavLink, useRouteMatch } from "react-router-dom"
+import { useState } from "react"
 
-const Navbar = () => {
-	const discordLogo = (
+const Server = () => {
+	const content = (
 		<svg width="28" height="20" viewBox="0 0 28 20">
 			<path
 				fill="currentColor"
@@ -11,27 +11,61 @@ const Navbar = () => {
 			></path>
 		</svg>
 	)
-	const plusSign = (
-		<svg width="24" height="24" viewBox="0 0 24 24">
-			<path
-				fill="currentColor"
-				d="M20 11.1111H12.8889V4H11.1111V11.1111H4V12.8889H11.1111V20H12.8889V12.8889H20V11.1111Z"
-			></path>
-		</svg>
-	)
+	const to = "/server"
+	const [height, setHeight] = useState(0)
+
 	return (
-		<div className="navbar">
-			<NavButton content={discordLogo} classStyle="home-btn" to="/" />
-			<div className="divider"></div>
-			<div className="server-container">
-				<Server></Server>
-				<Server></Server>
-				<Server></Server>
-				<Server></Server>
-			</div>
-			<NavButton content={plusSign} classStyle="plus-btn" to="/add" />
+		<div className="server-btn-container">
+			<div className="status" style={{ height: height }}></div>
+			<ButtonLink
+				to={to}
+				label={content}
+				activeOnlyWhenExact={true}
+				className="nav-btn"
+				onMouseLeave={() => {
+					setHeight(0)
+				}}
+				onMouseEnter={() => {
+					setHeight(20)
+				}}
+				onActive={() => {
+					setHeight(40)
+				}}
+				onDeactivate={() => {
+					if (height == 40) setHeight(0)
+				}}
+			/>
 		</div>
 	)
 }
 
-export default Navbar
+function ButtonLink({
+	label,
+	to,
+	activeOnlyWhenExact,
+	className,
+	onMouseEnter,
+	onMouseLeave,
+	onActive,
+	onDeactivate,
+}) {
+	let match = useRouteMatch({
+		path: to,
+		exact: activeOnlyWhenExact,
+	})
+
+	match ? onActive() : onDeactivate()
+
+	return (
+		<NavLink
+			to={to}
+			className={className}
+			onMouseEnter={onMouseEnter}
+			onMouseLeave={onMouseLeave}
+		>
+			{label}
+		</NavLink>
+	)
+}
+
+export default Server

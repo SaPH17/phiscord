@@ -1,68 +1,66 @@
-import './NavButton.sass'
-import ReactDOM from "react-dom";
+import { NavLink, useRouteMatch } from "react-router-dom"
+import "./NavButton.sass"
+import { useState } from "react"
 
-import React, { Component } from 'react'
+const NavButton = ({ content, classStyle, to }) => {
+	const [height, setHeight] = useState(0)
 
-class NavButton extends Component {
+	return (
+		<div className="nav-btn-container">
+			<div className="status" style={{ height: height }}></div>
+			{/* <NavLink to={to} className={"nav-btn " + classStyle} 
+                    onMouseEnter={() => {if(height != 40) setHeight(20)}} onMouseLeave={() => {if(height != 40) setHeight(0)}}>
+                {content}
+            </NavLink> */}
+			<ButtonLink
+				to={to}
+				label={content}
+				activeOnlyWhenExact={true}
+				className={"nav-btn " + classStyle}
+				onMouseLeave={() => {
+					setHeight(0)
+				}}
+				onMouseEnter={() => {
+					setHeight(20)
+				}}
+				onActive={() => {
+					setHeight(40)
+				}}
+				onDeactivate={() => {
+					if (height == 40) setHeight(0)
+				}}
+			/>
+		</div>
+	)
+}
 
-    
+function ButtonLink({
+	label,
+	to,
+	activeOnlyWhenExact,
+	className,
+	onMouseEnter,
+	onMouseLeave,
+	onActive,
+	onDeactivate,
+}) {
+	let match = useRouteMatch({
+		path: to,
+		exact: activeOnlyWhenExact,
+	})
 
-    addClass(){
-        // console.log(document.querySelector('.status'))
-        // console.log(t)
-        // document.querySelector('.status').classList.add('hovered')
-        // const node = ReactDOM.findDOMNode(this);
-        // if (node instanceof HTMLElement) {
-        //     node.querySelector('.status').classList.add('hovered')
-        // }
-        // ReactDOM.findDOMNode(this).querySelector('.status').classList.add('hovered')
+	match ? onActive() : onDeactivate()
 
-
-    }
-
-    removeClass(){
-        document.querySelector('.status').classList.remove('hovered')
-    }
-
-    render() {
-
-
-        return (
-            <div className="nav-btn-container">
-                <div className="status"></div>
-                <a href="/" className={"btn nav-btn"} onMouseEnter={this.addClass} onMouseLeave={this.removeClass}>
-                    {/* {props.content} */}
-                </a>
-            </div>
-        )
-    }
+	return (
+		<NavLink
+			to={to}
+			className={className}
+			onMouseEnter={onMouseEnter}
+			onMouseLeave={onMouseLeave}
+		>
+			{label}
+		</NavLink>
+	)
 }
 
 export default NavButton
-// const NavButton = (props) => {
-//     function addClass(){
-//         // console.log(document.querySelector('.status'))
-//         // console.log(t)
-//         // document.querySelector('.status').classList.add('hovered')
-//         const node = ReactDOM.findDOMNode(this);
-//         if (node instanceof HTMLElement) {
-//             node.querySelector('.status').classList.add('hovered')
-//         }
-//         // ReactDOM.findDOMNode(this).querySelector('.status').classList.add('hovered')
-
-//     }
-
-//     const removeClass = () => {
-//         document.querySelector('.status').classList.remove('hovered')
-//     }
-
-//     return (
-//         <div className="nav-btn-container">
-//             <div className="status"></div>
-//             <a href="/" className={"btn " + props.classStyle} onMouseEnter={addClass} onMouseLeave={removeClass}>
-//                 {props.content}
-//             </a>
-//         </div>
-//     )
-// }
-

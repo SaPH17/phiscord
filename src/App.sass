@@ -1,5 +1,26 @@
+@use './variables'
+
 .container
     display: flex
     flex-direction: row
     height: 100%
     width: 100%
+
+    .navbar-container
+        display: flex
+        overflow-y: hidden
+
+    .content-container
+        display: flex
+        width: calc( 100% - 65px )
+
+        .sidebar-container
+            width: 240px
+            display: flex
+            flex-direction: column
+
+            .sidebar-content-container
+                height: calc( 100vh - 52px)
+                max-height: calc( 100vh - 52px)
+                overflow-y: scroll
+                background-color: variables.$navbar-color

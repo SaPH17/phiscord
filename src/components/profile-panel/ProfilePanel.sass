@@ -1,0 +1,34 @@
+@use '../../variables'
+
+.profile-panel-container
+    display: flex
+    bottom: 0
+    flex-direction: row
+    padding: 0px 8px
+    align-items: center
+    background-color: variables.$third-color
+    height: 52px
+
+    img
+        width: 32px
+        height: 32px
+        border-radius: 50%
+        margin-right: 12px
+
+    div
+
+        .profile-panel-name
+            font-size: variables.$font-medium
+            color: variables.$white-color
+            font-weight: bold
+
+        .profile-panel-status
+            font-size: variables.$font-small
+            color: variables.$text-color
+
+    .settings-button
+        display: flex
+        align-items: center
+        margin-left: auto
+        margin-right: 10px
+        color: variables.$text-color

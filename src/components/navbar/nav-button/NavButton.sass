@@ -4,7 +4,7 @@ $status-none: 0px
 $status-notif: 8px
 $status-hover: 20px
 $status-active: 40px
-    
+
 .nav-btn-container
     display: flex
     flex-direction: row
@@ -16,17 +16,17 @@ $status-active: 40px
         justify-content: center
         align-self: center
         width: 4px
-        height: $status-none
+        // height: $status-none
         margin-right: 2px
         background-color: variables.$white-color
         border-top-right-radius: 4px
         border-bottom-right-radius: 4px
-        transition-duration: 0.1s
+        transition-duration: 0.2s
 
     .hovered
-        height: $status-hover
+        // height: $status-hover
 
-    .btn
+    .nav-btn
         background-color: variables.$primary-color
         border-radius: 50%
         display: flex
@@ -41,13 +41,7 @@ $status-active: 40px
         &:hover
             border-radius: 30%
 
-            // .nav-btn
-            //     background-color: variables.$blue-color
-
-            + .status
-                background-color: red
-
-    .nav-btn
+    .home-btn
         color: variables.$white-color
 
         &:hover
@@ -55,8 +49,7 @@ $status-active: 40px
 
     .plus-btn
         color: variables.$green-color
-        
+
         &:hover
             background-color: variables.$green-color
             color: variables.$white-color
-            

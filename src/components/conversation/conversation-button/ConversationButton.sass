@@ -1,0 +1,29 @@
+@use '../../../variables'
+
+.conversation-btn
+    display: flex
+    flex-direction: row
+    padding: 4px 8px
+    text-decoration: none
+    color: variables.$text-color
+    align-items: center
+
+    &:hover
+        background-color: variables.$hover-color
+        color: variables.$text-hover
+
+    img
+        width: 32px
+        height: 32px
+        border-radius: 50%
+        margin-right: 12px
+
+    div
+        display: flex
+        flex-direction: column
+
+        .conversation-name
+            font-size: variables.$font-medium
+
+        .conversation-status
+            font-size: variables.$font-small

@@ -1,0 +1,32 @@
+@use '../../variables'
+
+.conversation-container
+    display: flex
+    flex-direction: column
+    background-color: variables.$secondary-color
+    border-top-left-radius: 15px
+    padding: 10px
+
+    .conversation-friends
+        padding: 5px 8px
+        display: flex
+        flex-direction: row
+        color: variables.$text-color
+        text-decoration: none
+
+        &:hover
+            color: variables.$text-hover
+            background: variables.$hover-color
+
+        .conversation-friends-logo
+            margin-right: 20px
+
+        .conversation-friends-title
+            font-size: variables.$font-medium
+
+    .title
+        padding: 0px 8px
+        font-size: variables.$font-small
+        color: variables.$text-color
+        font-family: variables.$font
+        margin: 5px 0px
