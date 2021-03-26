@@ -1,5 +1,5 @@
 import "./ConversationButton.sass"
-import dummy from "../../../assets/dummy.jpg"
+import dummy from "../../../../assets/dummy.jpg"
 
 const ConversationButton = () => {
 	return (

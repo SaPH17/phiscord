@@ -1,12 +1,12 @@
 import { Switch, Route } from "react-router-dom"
-import Conversation from "../conversation/Conversation"
-import Channel from "../channel/Channel"
+import Conversation from "./conversation/Conversation"
+import Channel from "./channel/Channel"
 
 const Sidebar = () => {
 	return (
 		<>
 			<Switch>
-				<Route exact path="/">
+				<Route path="/home">
 					<Conversation />
 				</Route>
 				<Route path="/server">

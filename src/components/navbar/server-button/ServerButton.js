@@ -32,7 +32,7 @@ const Server = () => {
 					setHeight(40)
 				}}
 				onDeactivate={() => {
-					if (height == 40) setHeight(0)
+					if (height === 40) setHeight(0)
 				}}
 			/>
 		</div>

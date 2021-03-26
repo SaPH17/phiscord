@@ -1,4 +1,4 @@
-import dummy from "../../assets/dummy.jpg"
+import dummy from "../../../assets/dummy.jpg"
 import "./ProfilePanel.sass"
 
 const ProfilePanel = () => {

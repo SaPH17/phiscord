@@ -1,0 +1,47 @@
+@use '../../../../variables'
+
+.friends
+    display: flex
+    flex-direction: row
+    align-items: center
+    border-top: 2px solid variables.$divider-color
+    padding: 10px 16px
+
+    &:hover
+        background-color: variables.$secondary-hover-color
+        border-radius: 10px
+
+        .buttons
+            div
+                background-color: variables.$navbar-color
+
+    img
+        width: 36px
+        height: 36px
+        border-radius: 50%
+        margin-right: 12px
+
+    .friends-info
+        .username
+            color: white
+            font-size: variables.$font-medium
+
+        .status
+            color: variables.$text-color
+            font-size: variables.$font-small
+    .buttons
+        display: flex
+        flex-direction: row
+        margin-left: auto
+        color: variables.$text-color
+
+        div
+            background-color: variables.$secondary-color
+            width: 30px
+            height: 30px
+            margin: 0px 8px
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 50%
+            padding: 4px

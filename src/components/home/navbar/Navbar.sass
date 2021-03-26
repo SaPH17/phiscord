@@ -1,0 +1,57 @@
+@use '../../../variables'
+
+.homepage-navbar-container
+    display: flex
+    flex-direction: row
+    padding: 7px 16px
+    height: variables.$content-nav-height
+    font-size: variables.$font-medium
+    border-bottom: 2px solid variables.$navbar-color
+
+    .homepage-navbar-friends-container
+        padding-right: 16px
+        border-right: 1px variables.$divider-color solid
+        display: flex
+        align-items: center
+        flex-direction: row
+        color: white
+
+        svg
+            display: flex
+            align-items: center
+            color: variables.$text-color
+            margin-right: 8px
+
+    .homepage-status-container
+        margin: 0px
+        list-style: none
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding: 0px
+
+        li
+            padding: 0px 5px
+            margin: 0px 15px
+
+            &:hover
+                background-color: variables.$hover-color
+                border-radius: 5px
+
+            a
+                text-decoration: none
+                color: variables.$text-color
+                font-size: variables.$font-medium
+
+                &:hover
+                    color: variables.$text-hover
+
+            &:last-child
+                background-color: #43b581
+                border-radius: 5px
+                padding: 2px 8px
+                margin: 0px 5px
+                font-size: variables.$font-medium
+
+                a
+                    color: #FFF

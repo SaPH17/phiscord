@@ -21,7 +21,7 @@ const Navbar = () => {
 	)
 	return (
 		<div className="navbar">
-			<NavButton content={discordLogo} classStyle="home-btn" to="/" />
+			<NavButton content={discordLogo} classStyle="home-btn" to="/home" />
 			<div className="divider"></div>
 			<div className="server-container">
 				<Server></Server>

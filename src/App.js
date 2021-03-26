@@ -1,7 +1,8 @@
 import Navbar from "./components/navbar/Navbar.js"
-import ProfilePanel from "./components/profile-panel/ProfilePanel"
+import ProfilePanel from "./components/sidebar/profile-panel/ProfilePanel"
 import Sidebar from "./components/sidebar/Sidebar"
-import { BrowserRouter } from "react-router-dom"
+import Home from "./components/home/Home"
+import { BrowserRouter, Switch, Route } from "react-router-dom"
 import "./App.sass"
 
 const App = () => {
@@ -18,7 +19,13 @@ const App = () => {
 						</div>
 						<ProfilePanel />
 					</div>
-					<div className="content"></div>
+					<div className="content">
+						<Switch>
+							<Route path="/home">
+								<Home></Home>
+							</Route>
+						</Switch>
+					</div>
 				</div>
 			</BrowserRouter>
 		</div>

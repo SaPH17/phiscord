@@ -15,7 +15,7 @@ const NavButton = ({ content, classStyle, to }) => {
 			<ButtonLink
 				to={to}
 				label={content}
-				activeOnlyWhenExact={true}
+				activeOnlyWhenExact={false}
 				className={"nav-btn " + classStyle}
 				onMouseLeave={() => {
 					setHeight(0)
@@ -27,7 +27,7 @@ const NavButton = ({ content, classStyle, to }) => {
 					setHeight(40)
 				}}
 				onDeactivate={() => {
-					if (height == 40) setHeight(0)
+					if (height === 40) setHeight(0)
 				}}
 			/>
 		</div>

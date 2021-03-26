@@ -1,0 +1,83 @@
+@use '../../../variables'
+
+// .conversation-container
+//     display: flex
+//     flex-direction: column
+//     background-color: variables.$secondary-color
+//     border-top-left-radius: 15px
+//     height: calc( 100% - 10px )
+//     padding: 10px
+
+//     .title
+//         padding: 0px 8px
+//         font-size: variables.$font-small
+//         color: variables.$text-color
+//         font-family: variables.$font
+//         margin: 5px 0px
+
+//     .conversation-button-container
+//         height: 100%
+//         overflow-y: scroll
+
+// .conversation-friends
+//     padding: 0px 8px
+//     display: flex
+//     flex-direction: row
+//     color: variables.$text-color
+//     text-decoration: none
+//     height: variables.$content-nav-height
+//     border-bottom: 2px solid variables.$navbar-color
+
+//     &:hover
+//         color: variables.$text-hover
+//         background: variables.$hover-color
+//         border-radius: 5px
+
+//     .conversation-friends-logo
+//         margin-right: 20px
+
+//     .conversation-friends-title
+//         font-size: variables.$font-medium
+
+.conversation-container
+    display: flex
+    flex-direction: column
+    background-color: variables.$secondary-color
+    border-top-left-radius: 15px
+    height: 100%
+
+    .conversation-friends-container
+        display: flex
+        flex-direction: row
+        align-items: center
+        text-decoration: none
+        color: variables.$white-color
+        padding: 8px 16px
+        cursor: pointer
+        height: variables.$content-nav-height
+        border-bottom: 2px solid variables.$navbar-color
+
+        &:hover
+            background-color: variables.$hover-color
+            border-top-left-radius: 15px
+
+        .conversation-friends-logo
+            margin-right: 20px
+            transform: translateY(2px)
+
+        .conversation-friends-title
+            font-size: variables.$font-medium
+
+    .conversation-button-container
+        height: 100%
+        color: variables.$text-color
+        background-color: variables.$secondary-color
+        padding: 5px 5px 5px 5px
+        overflow-y: scroll
+
+        .title
+            padding: 0px 8px
+            font-size: variables.$font-small
+            color: variables.$text-color
+            font-family: variables.$font
+            margin: 5px 0px
