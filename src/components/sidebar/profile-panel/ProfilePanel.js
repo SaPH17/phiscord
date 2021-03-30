@@ -1,15 +1,15 @@
 import dummy from "../../../assets/dummy.jpg"
-import "./ProfilePanel.sass"
+import styles from "./ProfilePanel.module.sass"
 
 const ProfilePanel = () => {
 	return (
-		<div className="profile-panel-container">
+		<div className={styles.container}>
 			<img src={dummy} alt="" />
 			<div>
-				<div className="profile-panel-name">Dummy Desu</div>
-				<div className="profile-panel-status">#1234</div>
+				<div className={styles.name}>Dummy Desu</div>
+				<div className={styles.status}>#1234</div>
 			</div>
-			<div className="settings-button">
+			<div className={styles.settingsBtn}>
 				<svg aria-hidden="false" width="20" height="20" viewBox="0 0 24 24">
 					<path
 						fill="currentColor"

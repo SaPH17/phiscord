@@ -1,13 +1,13 @@
-import "./ConversationButton.sass"
+import styles from "./ConversationButton.module.sass"
 import dummy from "../../../../assets/dummy.jpg"
 
 const ConversationButton = () => {
 	return (
-		<a href="#" className="conversation-btn">
+		<a href="/home/conversation" className={styles.btn}>
 			<img src={dummy} alt="" />
 			<div>
-				<div className="conversation-name">Dummy Name</div>
-				<div className="conversation-status">Dummy Status</div>
+				<div className={styles.name}>Dummy Name</div>
+				<div className={styles.status}>Dummy Status</div>
 			</div>
 		</a>
 	)

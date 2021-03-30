@@ -1,0 +1,44 @@
+@use '../../../variables'
+
+.container
+    display: flex
+    flex-direction: column
+    background-color: variables.$secondary-color
+    border-top-left-radius: 15px
+    height: 100%
+
+    .titleContainer
+        display: flex
+        flex-direction: row
+        align-items: center
+        text-decoration: none
+        color: variables.$white-color
+        padding: 8px 16px
+        cursor: pointer
+        height: variables.$content-nav-height
+        border-bottom: 2px solid variables.$navbar-color
+
+        &:hover
+            background-color: variables.$hover-color
+            border-top-left-radius: 15px
+
+        .logo
+            margin-right: 20px
+            transform: translateY(2px)
+
+        .title
+            font-size: variables.$font-medium
+
+    .btnContainer
+        height: 100%
+        color: variables.$text-color
+        background-color: variables.$secondary-color
+        padding: 5px 5px 5px 5px
+        overflow-y: scroll
+
+        .title
+            padding: 0px 8px
+            font-size: variables.$font-small
+            color: variables.$text-color
+            font-family: variables.$font
+            margin: 5px 0px

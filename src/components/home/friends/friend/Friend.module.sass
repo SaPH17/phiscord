@@ -9,7 +9,16 @@
 
     &:hover
         background-color: variables.$secondary-hover-color
+        border-top: 2px solid variables.$primary-color
         border-radius: 10px
+
+        .info
+            .usernameContainer
+                .id
+                    display: flex
+
+        &+ .friends
+            border-top: 2px solid variables.$primary-color
 
         .buttons
             div
@@ -21,10 +30,15 @@
         border-radius: 50%
         margin-right: 12px
 
-    .friends-info
-        .username
+    .info
+        .usernameContainer
+            display: flex
             color: white
             font-size: variables.$font-medium
+
+            .id
+                color: variables.$text-color
+                display: none
 
         .status
             color: variables.$text-color

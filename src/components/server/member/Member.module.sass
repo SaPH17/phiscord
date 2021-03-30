@@ -1,0 +1,24 @@
+@use '../../../variables'
+
+.container
+    display: flex
+    padding: 4px 8px
+    margin: 4px 0px
+    align-items: center
+    color: variables.$text-color
+    border-radius: 5px
+    text-overflow: ellipsis
+    overflow: hidden
+    white-space: nowrap
+    cursor: pointer
+
+    &:hover
+        background-color: variables.$hover-color
+        color: variables.$text-hover
+        border-radius: 5px
+
+    img
+        width: 32px
+        height: 32px
+        border-radius: 50%
+        margin-right: 12px

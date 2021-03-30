@@ -1,5 +1,5 @@
 import ConversationButton from "./conversation-button/ConversationButton"
-import "./Conversation.sass"
+import styles from "./Conversation.module.sass"
 
 const Conversation = () => {
 	const friendLogo = (
@@ -17,60 +17,13 @@ const Conversation = () => {
 	)
 
 	return (
-		// <div className="conversation-container">
-		// 	<div>
-		// 		<a className="conversation-friends" href="#">
-		// 			<div className="conversation-friends-logo">{friendLogo}</div>
-		// 			<div className="conversation-friends-title">Friends</div>
-		// 		</a>
-		// 	</div>
-		// 	<div className="title">DIRECT MESSAGE</div>
-		// 	<div className="conversation-button-container">
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 		<ConversationButton />
-		// 	</div>
-		// </div>
-
-		<div className="conversation-container">
-			<a className="conversation-friends-container" href="/home/online">
-				<div className="conversation-friends-logo">{friendLogo}</div>
-				<div className="conversation-friends-title">Friends</div>
+		<div className={styles.container}>
+			<a className={styles.titleContainer} href="/home/online">
+				<div className={styles.logo}>{friendLogo}</div>
+				<div className={styles.title}>Friends</div>
 			</a>
-			<div className="conversation-button-container">
-				<div className="title">DIRECT MESSAGE</div>
+			<div className={styles.btnContainer}>
+				<div className={styles.title}>DIRECT MESSAGE</div>
 				<ConversationButton />
 				<ConversationButton />
 				<ConversationButton />

@@ -1,11 +1,6 @@
 @use '../../../variables'
 
-$status-none: 0px
-$status-notif: 8px
-$status-hover: 20px
-$status-active: 40px
-
-.nav-btn-container
+.container
     display: flex
     flex-direction: row
     height: 50px
@@ -16,17 +11,13 @@ $status-active: 40px
         justify-content: center
         align-self: center
         width: 4px
-        // height: $status-none
         margin-right: 2px
         background-color: variables.$white-color
         border-top-right-radius: 4px
         border-bottom-right-radius: 4px
         transition-duration: 0.2s
 
-    .hovered
-        // height: $status-hover
-
-    .nav-btn
+    .navBtn
         background-color: variables.$primary-color
         border-radius: 50%
         display: flex
@@ -41,13 +32,13 @@ $status-active: 40px
         &:hover
             border-radius: 30%
 
-    .home-btn
+    .homeBtn
         color: variables.$white-color
 
         &:hover
             background-color: variables.$blue-color
 
-    .plus-btn
+    .plusBtn
         color: variables.$green-color
 
         &:hover

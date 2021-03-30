@@ -1,13 +1,13 @@
 @use '../../../variables'
 
-.channel-container
+.container
     display: flex
     flex-direction: column
     background-color: variables.$secondary-color
     border-top-left-radius: 15px
     height: 100%
 
-    .server-name
+    .serverName
         display: flex
         align-items: center
         justify-content: space-between
@@ -15,7 +15,8 @@
         color: variables.$white-color
         padding: 8px 16px
         cursor: pointer
-        height: variables.$content-nav-height
+        min-height: variables.$content-nav-height
+        max-height: variables.$content-nav-height
         border-bottom: 2px solid variables.$navbar-color
 
         &:hover
@@ -27,7 +28,7 @@
             color: variables.$white-color
             font-weight: bold
 
-    .channel-container
+    .channelContainer
         height: 100%
         color: variables.$text-color
         background-color: variables.$secondary-color

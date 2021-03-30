@@ -1,6 +1,6 @@
 import React from "react"
-import "./Friend.sass"
 import dummy from "../../../../assets/dummy.jpg"
+import styles from "./Friend.module.sass"
 
 const Friend = () => {
 	const messageIcon = (
@@ -14,7 +14,7 @@ const Friend = () => {
 
 	const othersIcon = (
 		<svg width="24" height="24" viewBox="0 0 24 24">
-			<g fill="none" fill-rule="evenodd">
+			<g fill="none" fillRule="evenodd">
 				<path d="M24 0v24H0V0z"></path>
 				<path
 					fill="currentColor"
@@ -25,13 +25,16 @@ const Friend = () => {
 	)
 
 	return (
-		<a className="friends" href="#">
+		<a className={styles.friends} href="#">
 			<img src={dummy} alt="" />
-			<div className="friends-info">
-				<div className="username">Skolastika Gabriella</div>
-				<div className="status">Dummy Status</div>
+			<div className={styles.info}>
+				<div className={styles.usernameContainer}>
+					<div className={styles.name}>Dummy Name</div>
+					<div className={styles.id}>#6969</div>
+				</div>
+				<div className={styles.status}>Dummy Status</div>
 			</div>
-			<div className="buttons">
+			<div className={styles.buttons}>
 				<div>{messageIcon}</div>
 				<div>{othersIcon}</div>
 			</div>

@@ -1,0 +1,41 @@
+@use '../../../variables'
+
+.container
+    display: flex
+    flex-direction: row
+    padding: 8px 16px
+    align-items: center
+    height: variables.$content-nav-height
+    font-size: variables.$font-medium
+    border-bottom: 2px solid variables.$navbar-color
+
+    .atSignContainer
+        padding-right: 16px
+        border-right: 1px variables.$divider-color solid
+        display: flex
+        align-items: center
+        flex-direction: row
+        color: white
+        font-weight: bold
+
+        svg
+            display: flex
+            align-items: center
+            color: variables.$text-color
+            margin-right: 8px
+
+    .buttons
+        display: flex
+        align-items: center
+        margin-left: auto
+        padding: 0px 8px
+
+        .button
+            margin: 0px 8px
+            color: variables.$interactable-color
+
+            &:nth-child(2)
+                transform: translateY(1px)
+
+            &:hover
+                color: variables.$interactable-hover

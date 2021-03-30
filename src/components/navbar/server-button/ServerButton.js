@@ -1,4 +1,4 @@
-import "./ServerButton.sass"
+import styles from "./ServerButton.module.sass"
 import { NavLink, useRouteMatch } from "react-router-dom"
 import { useState } from "react"
 
@@ -15,13 +15,13 @@ const Server = () => {
 	const [height, setHeight] = useState(0)
 
 	return (
-		<div className="server-btn-container">
-			<div className="status" style={{ height: height }}></div>
+		<div className={styles.container}>
+			<div className={styles.status} style={{ height: height }}></div>
 			<ButtonLink
 				to={to}
 				label={content}
 				activeOnlyWhenExact={true}
-				className="nav-btn"
+				className={styles.navBtn}
 				onMouseLeave={() => {
 					setHeight(0)
 				}}

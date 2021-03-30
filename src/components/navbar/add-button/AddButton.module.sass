@@ -1,48 +1,37 @@
 @use '../../../variables'
 
-$status-none: 0px
-$status-notif: 8px
-$status-hover: 20px
-$status-active: 40px
-
-.server-btn-container
+.container
     display: flex
     flex-direction: row
     height: 50px
     align-items: center
-    margin-bottom: 5px
 
     .status
         display: flex
         justify-content: center
         align-self: center
         width: 4px
-        height: $status-none
         margin-right: 2px
         background-color: variables.$white-color
         border-top-right-radius: 4px
         border-bottom-right-radius: 4px
         transition-duration: 0.2s
 
-    .hovered
-        height: $status-hover
-
-    .active
-        height: $status-active
-
-    .nav-btn
+    .addBtn
         background-color: variables.$primary-color
         border-radius: 50%
         display: flex
         height: 45px
         width: 45px
         text-decoration: none
-        color: variables.$white-color
         justify-content: center
         align-items: center
         margin-left: 5px
         transition-duration: 0.2s
+        color: variables.$green-color
+        cursor: pointer
 
         &:hover
-            background-color: variables.$blue-color
             border-radius: 30%
+            background-color: variables.$green-color
+            color: variables.$white-color

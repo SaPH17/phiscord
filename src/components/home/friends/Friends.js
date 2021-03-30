@@ -1,12 +1,12 @@
 import React from "react"
-import "./Friends.sass"
+import styles from "./Friends.module.sass"
 import Friend from "./friend/Friend"
 
 const Friends = (props) => {
 	return (
-		<div className="homepage-friends-container">
-			<div className="title">{props.type}</div>
-			<div className="homepage-friends">
+		<div className={styles.container}>
+			<div className={styles.title}>{props.type}</div>
+			<div className={styles.friendsContainer}>
 				<Friend></Friend>
 				<Friend></Friend>
 				<Friend></Friend>

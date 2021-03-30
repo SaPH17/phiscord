@@ -1,0 +1,24 @@
+@use '../../../variables'
+
+.container
+    display: flex
+    flex-direction: row
+    padding: 8px 16px
+    align-items: center
+    height: variables.$content-nav-height
+    font-size: variables.$font-medium
+    border-bottom: 2px solid variables.$navbar-color
+
+    .hashtagContainer
+        padding-right: 16px
+        display: flex
+        align-items: center
+        flex-direction: row
+        color: white
+        font-weight: bold
+
+        svg
+            display: flex
+            align-items: center
+            color: variables.$text-color
+            margin-right: 8px

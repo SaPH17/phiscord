@@ -1,5 +1,6 @@
 import React from "react"
-import './Navbar.sass'
+import styles from "./Navbar.module.sass"
+import { NavLink } from "react-router-dom"
 
 const Navbar = () => {
 	const friendLogo = (
@@ -17,23 +18,31 @@ const Navbar = () => {
 	)
 
 	return (
-		<div className="homepage-navbar-container">
-			<div className="homepage-navbar-friends-container">
+		<div className={styles.container}>
+			<div className={styles.friendsContainer}>
 				<div className="svg">{friendLogo}</div>
 				Friends
 			</div>
-			<ul className="homepage-status-container">
+			<ul className={styles.statusContainer}>
 				<li>
-					<a href="/home/online">Online</a>
+					<NavLink to="/home/online" activeClassName={styles.active}>
+						Online
+					</NavLink>
 				</li>
 				<li>
-					<a href="/home/all">All</a>
+					<NavLink to="/home/all" activeClassName={styles.active}>
+						All
+					</NavLink>
 				</li>
 				<li>
-					<a href="/home/blocked">Blocked</a>
+					<NavLink to="/home/blocked" activeClassName={styles.active}>
+						Blocked
+					</NavLink>
 				</li>
 				<li>
-					<a href="">Add Friend</a>
+					<NavLink to="/home/add-friends" activeClassName={styles.activeAdd}>
+						Add Friend
+					</NavLink>
 				</li>
 			</ul>
 		</div>

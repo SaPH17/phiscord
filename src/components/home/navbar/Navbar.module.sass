@@ -1,14 +1,14 @@
 @use '../../../variables'
 
-.homepage-navbar-container
+.container
     display: flex
     flex-direction: row
-    padding: 7px 16px
+    padding: 8px 16px
     height: variables.$content-nav-height
     font-size: variables.$font-medium
     border-bottom: 2px solid variables.$navbar-color
 
-    .homepage-navbar-friends-container
+    .friendsContainer
         padding-right: 16px
         border-right: 1px variables.$divider-color solid
         display: flex
@@ -22,7 +22,7 @@
             color: variables.$text-color
             margin-right: 8px
 
-    .homepage-status-container
+    .statusContainer
         margin: 0px
         list-style: none
         display: flex
@@ -31,17 +31,20 @@
         padding: 0px
 
         li
-            padding: 0px 5px
             margin: 0px 15px
+            font-size: variables.$font-medium
 
             &:hover
-                background-color: variables.$hover-color
+                background-color: variables.$third-hover-color
                 border-radius: 5px
 
             a
+                display: flex
+                align-items: center
+                justify-content: center
+                padding: 5px 8px
                 text-decoration: none
                 color: variables.$text-color
-                font-size: variables.$font-medium
 
                 &:hover
                     color: variables.$text-hover
@@ -49,9 +52,16 @@
             &:last-child
                 background-color: #43b581
                 border-radius: 5px
-                padding: 2px 8px
-                margin: 0px 5px
-                font-size: variables.$font-medium
 
                 a
                     color: #FFF
+                    padding: 5px 8px
+
+        .active
+            color: variables.$text-hover
+            background-color: variables.$third-hover-color
+            border-radius: 5px
+
+        .activeAdd
+            color: #3f9871
+            background-color: #38524c

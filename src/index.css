@@ -8,10 +8,15 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-*{
+* {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
 	text-decoration: none;
+	color: inherit;
 }
 
 code {
@@ -29,11 +34,10 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-	background: #2f3136;
+	background: transparent;
 	border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
 	background: #202225;
 	border-radius: 10px;

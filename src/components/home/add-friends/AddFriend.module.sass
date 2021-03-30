@@ -1,0 +1,47 @@
+@use '../../../variables'
+
+.container
+    display: flex
+    flex-direction: column
+    padding: 16px 30px
+    border-bottom: 1px solid variables.$navbar-color
+
+    .title
+        color: white
+        font-weight: bold
+
+    .description
+        margin-top: 8px
+        color: #dcddde
+        font-size: 14px
+
+    .inputContainer
+        display: flex
+        align-items: center
+        margin-top: 16px
+        background-color: #313339
+        padding-left: 8px
+        border-radius: 8px
+
+        input
+            flex: auto
+            line-height: 52px
+            font-size: variables.$font-medium
+            background-color: inherit
+            outline: none
+            border: none
+            padding-left: 16px
+            caret-color: variables.$secondary-text-color
+            color: variables.$secondary-text-color
+
+            &::placeholder
+                color: #44484f
+
+        .button
+            margin-right: 20px
+            background-color: variables.$blue-color
+            color: white
+            padding: 6px 12px
+            border-radius: 2px
+            cursor: pointer
+            font-size: 14px

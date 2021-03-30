@@ -9,6 +9,9 @@ const Sidebar = () => {
 				<Route path="/home">
 					<Conversation />
 				</Route>
+				<Route path="/conversation">
+					<Conversation />
+				</Route>
 				<Route path="/server">
 					<Channel />
 				</Route>
